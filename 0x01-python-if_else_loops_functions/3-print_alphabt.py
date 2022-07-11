@@ -1,5 +1,6 @@
 #!/usr/bin/python3
+# 2-print_alphabet.py
 
-for x in range(ord("a"), ord("z") + 1):
-    if chr(x) != 'q' and chr(x) != 'e':
-        print("{}".format(chr(x)), end="")
+"""Print the alphabet in lowercase, not followed by a new line."""
+for letter in range(97, 123):
+    print("{}".format(chr(letter)), end="")
