@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
-===================================
-module with class BaseGeometry
-===================================
+Module 5-base_geometry
+Contains empty class BaseGeometry
 """
 
 
