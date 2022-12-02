@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""Sends a request to a given URL and displays the response body.
-Usage: ./7-error_code.py <URL>
-  - Handles HTTP errors.
+"""A  script that:
+- takes in a URL and an email address
+- sends a POST request to the passed URL with the email as a parameter
+- displays the body of the response.
 """
 import sys
 import requests
@@ -9,9 +10,7 @@ import requests
 
 if __name__ == "__main__":
     url = sys.argv[1]
+    value = {"email": sys.argv[2]}
 
-    r = requests.get(url)
-    if r.status_code >= 400:
-        print("Error code: {}".format(r.status_code))
-    else:
-        print(r.text)
+    r = requests.post(url, data=value)
+    print(r.text)
